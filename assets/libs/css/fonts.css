@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'centralesansbook';
+    src: url('fonts/centralesansbook-webfont.eot');
+    src: url('fonts/centralesansbook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/centralesansbook-webfont.woff2') format('woff2'),
+         url('fonts/centralesansbook-webfont.woff') format('woff'),
+         url('fonts/centralesansbook-webfont.ttf') format('truetype'),
+         url('fonts/centralesansbook-webfont.svg#centralesansbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'centralesanslight';
+    src: url('fonts/centralesanslight-webfont.eot');
+    src: url('fonts/centralesanslight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/centralesanslight-webfont.woff2') format('woff2'),
+         url('fonts/centralesanslight-webfont.woff') format('woff'),
+         url('fonts/centralesanslight-webfont.ttf') format('truetype'),
+         url('fonts/centralesanslight-webfont.svg#centralesanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'centralesansmedium';
+    src: url('fonts/centralesansmedium-webfont.eot');
+    src: url('fonts/centralesansmedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/centralesansmedium-webfont.woff2') format('woff2'),
+         url('fonts/centralesansmedium-webfont.woff') format('woff'),
+         url('fonts/centralesansmedium-webfont.ttf') format('truetype'),
+         url('fonts/centralesansmedium-webfont.svg#centralesansmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'centralesansthin';
+    src: url('fonts/centralesansthin-webfont.eot');
+    src: url('fonts/centralesansthin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/centralesansthin-webfont.woff2') format('woff2'),
+         url('fonts/centralesansthin-webfont.woff') format('woff'),
+         url('fonts/centralesansthin-webfont.ttf') format('truetype'),
+         url('fonts/centralesansthin-webfont.svg#centralesansthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'centralesansbold';
+    src: url('fonts/centralesansbold-webfont.eot');
+    src: url('fonts/centralesansbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/centralesansbold-webfont.woff2') format('woff2'),
+         url('fonts/centralesansbold-webfont.woff') format('woff'),
+         url('fonts/centralesansbold-webfont.ttf') format('truetype'),
+         url('fonts/centralesansbold-webfont.svg#centralesansthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
