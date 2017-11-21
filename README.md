@@ -34,6 +34,7 @@ Everything is working
   <li>validate</li>
   <li>velocity.min</li>
   <li>wow.min</li>
+  <li>knockout js</li>
 </ul>
 
 > CSS Libs
