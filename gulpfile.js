@@ -64,7 +64,7 @@ gulp.task('cssConcat', function() {
 // Script Concat
 
 gulp.task('scripts', function() {
-  return gulp.src(['./assets/libs/js/jquery.min.js',"./assets/libs/js/bootstrap.min.js","./assets/libs/js/wow.min.js","./assets/libs/js/slick.min.js","./assets/libs/js/svgConvert.min.js","./assets/libs/js/maskedinput.min.js"])
+  return gulp.src(['./assets/libs/js/jquery.min.js',"./assets/libs/js/bootstrap.min.js","./assets/libs/js/wow.min.js","./assets/libs/js/slick.min.js","./assets/libs/js/svgConvert.min.js","./assets/libs/js/maskedinput.min.js","./assets/libs/js/knockout.js"])
   	.pipe(sourcemaps.init())
     .pipe(concat('starterLibs.js'))
     .pipe(sourcemaps.write())
