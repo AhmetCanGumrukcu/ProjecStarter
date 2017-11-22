@@ -9,6 +9,8 @@ var imagemin = require('gulp-imagemin');
 var babel = require("babel-core");
 var babel = require("gulp-babel");
 var plumber = require("gulp-plumber");
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 
 // Sasss
@@ -36,7 +38,7 @@ gulp.task("jade", function() {
         .pipe(plumber())
         .pipe(jade({
             pretty: true
-        })
+        }))
         .pipe(plumber.stop())
         .pipe(gulp.dest("./"))
 });
@@ -66,7 +68,7 @@ gulp.task('cssConcat', function() {
 gulp.task('scripts', function() {
   return gulp.src(['./assets/libs/js/jquery.min.js',"./assets/libs/js/bootstrap.min.js","./assets/libs/js/wow.min.js","./assets/libs/js/slick.min.js","./assets/libs/js/svgConvert.min.js","./assets/libs/js/maskedinput.min.js","./assets/libs/js/knockout.js"])
   	.pipe(sourcemaps.init())
-    .pipe(concat('starterLibs.js'))
+    .pipe(concat('starterLibs.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./assets/js'));
 });
@@ -79,6 +81,15 @@ gulp.task('imagemin', function(){
         .pipe(gulp.dest('assets/img/news'))
 });
 
+// JS minify
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('assets/js/*.js'),
+        uglify(),
+        gulp.dest('assets/js/min')
+    ]
+  );
+});
 
 // Watch
 
@@ -86,7 +97,8 @@ gulp.task("watch", function() {
     gulp.watch("assets/scss/pro-main.scss", ["sass"]);
     gulp.watch("assets/css/pro-main.css", ["cssmin"]);
     gulp.watch("assets/jade/*.jade", ["jade"]);
-    gulp.watch("assets/jade/include/*.jade", ["jade"])
+    gulp.watch("assets/jade/include/*.jade", ["jade"]);
+    gulp.watch("assets/js/*.js", ["compress"]);
 });
 
-gulp.task("default", ["jade","sass","cssmin","imagemin","scripts","cssConcat","watch"]);
+gulp.task("default", ["jade","sass","cssmin","imagemin","scripts","cssConcat","compress","watch"]);
