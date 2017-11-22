@@ -13,6 +13,7 @@ Everything is working
 <li>JS Libs</li>
 <li>Image  compress</li>
 <li>Plumber</li>
+<li>Uglify</li>
 </ul>
 
 > JS libs
